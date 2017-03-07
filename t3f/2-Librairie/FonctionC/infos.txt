@@ -1,0 +1,7 @@
+Les labels .Lxxx générés par gcc sont des labels locaux (d'où le L). 
+Les labels FB et FE représentent respectivement le début et la fin d'une fonction (function begin / function end).
+Le numéro qui suit est généré de manière incrémentale.
+
+Les directives .cfi sont des directives 'Call Frame Information' permettant d'obtenir des informations de débogage et sont utilse pour la gestion des exceptions.
+CFA = Canonical Frame Address, c'est à dire %esp avant l'appel à le fonction => def_cfa_offset et Cie. cf http://dwarfstd.org/doc/DWARF4.pdf
+
