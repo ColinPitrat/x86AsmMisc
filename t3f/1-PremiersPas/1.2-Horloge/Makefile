@@ -7,10 +7,10 @@ APPNAME  = Horloge
 ####### Compilateur, outils et options
 
 ASM      = as
-ASMFLAGS = 
+ASMFLAGS = --32
 INCPATH  = 
 LINK     = ld
-LDFLAGS  = 
+LDFLAGS  = -m elf_i386
 LIBS     = 
 
 ####### Fichiers
