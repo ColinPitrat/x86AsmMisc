@@ -21,6 +21,7 @@ convertit:
   mov $10, %ecx
   div %ecx
   add $48, %edx
+  /* This must be push %rdx on 64 bits ... */
   push %edx
   inc %esi
   cmp $0, %eax
