@@ -18,20 +18,20 @@ _start:
   xor %ecx, %ecx
   xor %edx, %edx
 
-  # Deuxieme appel, passage des valeurs par la pile
+  # Deuxième appel, passage des valeurs par la pile
   push $5
   push $3
   call diff_mul_add_cdecl
   pop %ecx
   pop %ecx
 
-  # Mise à zero des registres, pour s'assurer que le premier appel n'influence pas le second
+  # Mise à zero des registres, pour s'assurer que le deuxième appel n'influence pas le troisième
   xor %eax, %eax
   xor %ebx, %ebx
   xor %ecx, %ecx
   xor %edx, %edx
 
-  # Troisieme appel, passage des valeurs par la pile (encore)
+  # Troisième appel, passage des valeurs par la pile (encore)
   push $7
   push $7
   call diff_mul_add_cdecl
