@@ -33,7 +33,7 @@ all: $(TARGET)
 $(TARGET): $(OBJECTS) 
 	$(LINK) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LIBS)
 
-.PHONY: clean
+.PHONY: clean mrproper
 clean:
 	rm -f *.o *~
 
