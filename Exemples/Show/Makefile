@@ -7,11 +7,12 @@ APPNAME  = Show
 ####### Compiler, tools and options
 
 ASM      = as
-ASMFLAGS = 
+ASMFLAGS = --32
 CC       = gcc
 CFLAGS   = 
 INCPATH  = 
 LINK     = ld
+LDFLAGS  = -m elf_i386
 LIBS     = 
 
 ####### Output directory
@@ -38,8 +39,9 @@ first: all
 all: Makefile $(TARGET)
 
 $(TARGET):  $(UICDECLS) $(OBJECTS)
-	$(LINK) -o $(TARGET) $(OBJECTS) $(LIBS)
+	$(LINK) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LIBS)
 
+.PHONY: clean mrproper
 clean:
 	rm -f *.o *~
 
